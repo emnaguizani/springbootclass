@@ -1,19 +1,30 @@
 package tn.esprit.arctic.new_championat.entities;
 
 import jakarta.persistence.*;
+import lombok.*;
+import lombok.experimental.FieldDefaults;
 
 import java.time.LocalDate;
 import java.util.Set;
 
 @Entity
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@RequiredArgsConstructor
+@ToString
+@EqualsAndHashCode
+@FieldDefaults(level = AccessLevel.PRIVATE)
 public class Course {
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     Long idCourse;
+
     String emplacement;
     LocalDate dateCoure;
-    @ManyToMany(mappedBy = "course")
+    @ManyToMany(mappedBy = "courses")
     private Set<Championat> championat;
-    @OneToMany
+    @OneToMany(mappedBy ="couurse")
     private Set<Position> positions;
 }

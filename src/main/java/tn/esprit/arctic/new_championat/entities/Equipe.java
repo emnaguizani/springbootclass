@@ -1,10 +1,16 @@
 package tn.esprit.arctic.new_championat.entities;
 
 import jakarta.persistence.*;
+import lombok.*;
 
 import java.util.Set;
 
 @Entity
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
+@ToString
 public class Equipe {
     @Id
     private Long idEquipe;
