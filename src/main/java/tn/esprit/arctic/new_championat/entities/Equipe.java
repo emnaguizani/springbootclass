@@ -10,7 +10,6 @@ import java.util.Set;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-@ToString
 public class Equipe {
     @Id
     private Long idEquipe;

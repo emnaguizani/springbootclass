@@ -1,6 +1,7 @@
 package tn.esprit.arctic.new_championat.entities;
 
 import jakarta.persistence.*;
+import org.springframework.stereotype.Controller;
 
 import java.util.Set;
 
@@ -14,7 +15,7 @@ public class Championat {
     private String LibelleC;
     private Integer annee;
     @OneToOne
-    private DetailChampionat detailChampionat;
+    private DetailChampionat ChampionatDetail;
     @ManyToMany
     private Set<Course> course;
 }

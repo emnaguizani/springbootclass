@@ -11,7 +11,7 @@ public interface ISponsorService {
 
     Sponsor modifierSponsor(Sponsor sponsor);
 
-    void supprimerSponsor (Long idSponsor);
+    void supprimerSponsor(Long idSponsor);
 
     List<Sponsor> listSponsors();
 

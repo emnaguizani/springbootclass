@@ -12,9 +12,6 @@ import java.util.Set;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@RequiredArgsConstructor
-@ToString
-@EqualsAndHashCode
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class Course {
     @Id
@@ -23,8 +20,8 @@ public class Course {
 
     String emplacement;
     LocalDate dateCoure;
-    @ManyToMany(mappedBy = "courses")
+    @ManyToMany(mappedBy = "course")
     private Set<Championat> championat;
-    @OneToMany(mappedBy ="couurse")
+    @OneToMany(mappedBy ="course")
     private Set<Position> positions;
 }
